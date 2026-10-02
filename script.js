@@ -348,7 +348,7 @@ const ART = {
       ${pins}
       <path class="hv-draw" d="M150 150 L220 230 L120 290 L270 320 L190 360" fill="none" stroke="#b79cff" stroke-width="2.5" stroke-dasharray="600"/>
       <rect x="400" y="70" width="330" height="320" rx="18" fill="#0b1513" stroke="#2d5a49"/>
-      ${svgText(428, 108, 'ONE PROFILE · 26 UNIS', '#94e1b4', 14)}
+      ${svgText(428, 108, 'ONE PROFILE, MANY UNIS', '#94e1b4', 14)}
       ${bars}`;
   },
   leave: () => {
@@ -407,8 +407,8 @@ const ART = {
 
 const PROJECTS = [
   {
-    title: 'ImbizoConnect', cat: 'web', art: 'imbizo', where: 'Independent build', year: '2026', wide: true,
-    desc: 'Apply to several South African universities with one profile. Real 2027 fees, closing dates and 756 programmes across all 26 public universities, an APS calculator, and an admissions portal where the database itself enforces who sees what.',
+    title: 'ImbizoConnect', cat: 'web', art: 'imbizo', where: 'Concept · independent build', year: '2026', wide: true,
+    desc: 'A concept platform I designed and built: students create one profile and apply to several South African universities from one place, with an APS calculator, fee summary and a mock admissions portal. Fully working demo with made-up students.',
     tags: ['JavaScript', 'Supabase', 'PostgreSQL RLS', 'Tests'],
     links: [['Live demo', 'https://mduduzigwija.github.io/ImbizoConnect/demo/']]
   },
