@@ -115,11 +115,11 @@ em { font-style: normal; background: var(--accent-grad); -webkit-background-clip
 
 .logo { display: flex; align-items: center; gap: 12px; font-weight: 600; }
 .logo-mark {
-  display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px;
-  background: var(--accent-grad); color: #062018; font: 800 16px var(--display);
-  transition: transform .5s var(--spring), border-radius .5s var(--ease);
+  width: 45px; height: 40px; border-radius: 10px; object-fit: cover;
+  box-shadow: 0 0 0 1px rgba(148, 225, 180, .18);
+  transition: transform .5s var(--spring), box-shadow .4s;
 }
-.logo:hover .logo-mark { transform: rotate(-12deg) scale(1.08); border-radius: 50%; }
+.logo:hover .logo-mark { transform: rotate(-8deg) scale(1.1); box-shadow: 0 0 0 1px var(--mint), 0 8px 24px -6px rgba(148, 225, 180, .55); }
 .logo-text { font-family: var(--display); font-size: 18px; letter-spacing: -.01em; }
 
 .navbar { position: relative; display: flex; gap: 4px; padding: 5px; border: 1px solid var(--line); border-radius: 99px; background: rgba(255, 255, 255, .03); }
