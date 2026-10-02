@@ -1,272 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mduduzi Gwija | Systems, Data &amp; Web</title>
+<meta name="description" content="Mduduzi Gwija: Cape Town public-sector professional who builds SharePoint systems, Power Platform workflows, Supabase apps and websites. Growing in IT and open to opportunities.">
+<meta name="theme-color" content="#07090a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mduduzi Gwija | Systems, Data &amp; Web">
+<meta property="og:description" content="I build systems that replace paperwork: SharePoint, Power Platform, Supabase and the web. Open to opportunities to learn and grow in IT.">
+<meta property="og:image" content="Image%203.jpg">
 
-      <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<link rel="shortcut icon" href="favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-<link rel="manifest" href="site.webmanifest" />
-    />
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-      
-    />
-    <!-- Added new font for tagline -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><i></i></div>
+<div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"><b class="cursor-label"></b></span></div>
+<div class="toast mono" role="status" aria-live="polite"></div>
 
-    <header class="header">
-      <a href="#home" class="logo">
-        Mduduzi <span>Gwija</span>
-      </a>
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="wrap nav">
+    <a href="#home" class="logo" aria-label="Mduduzi Gwija, back to top"><span class="logo-mark">MG</span><span class="logo-text">Mduduzi Gwija</span></a>
 
-      <i class="bx bx-menu" id="menu-icon"></i>
+    <nav class="navbar" aria-label="Main">
+      <span class="nav-pill" aria-hidden="true"></span>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-      <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills-and-interests">Skills and Interests</a>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="nav-right">
+      <span class="clock mono" aria-label="Local time in Cape Town"><span class="pulse"></span>CPT <span data-clock>--:--</span></span>
+      <a href="#contact" class="btn btn--sm btn--accent magnetic" data-cursor="Say hi">Let's talk</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
 
-    <button class="gradient-btn" id="header-contact-btn">Contact Me</button>
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="#about"><span class="mono">01</span>About</a></li>
+    <li><a href="#journey"><span class="mono">02</span>Journey</a></li>
+    <li><a href="#work"><span class="mono">03</span>Work</a></li>
+    <li><a href="#skills"><span class="mono">04</span>Skills</a></li>
+    <li><a href="#contact"><span class="mono">05</span>Contact</a></li>
+  </ul>
+  <div class="mobile-foot mono">
+    <a href="mailto:mduduzigwija@gmail.com">mduduzigwija@gmail.com</a>
+    <a href="tel:+27718340017">071 834 0017</a>
+    <span>Cape Town, South Africa</span>
+  </div>
+</div>
 
-    </header>
+<main id="main">
 
-    <!-- HOME SECTION -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <h1>Hi, it's <span>Mduduzi</span></h1>
-        <h3>Exploring opportunities in the world of 
-          <br><span>Information Technology</span></h3>
-        <br><br>
-        <p>
-          Driven by a strong passion for technology and a comprehensive understanding of IT fundamentals, I am enthusiastically pursuing a transition into this dynamic field.
-          <br> While my academic background is in Public Administration, I've honed a unique skill set in optimizing systems, meticulous data management, and building automated processes.
-          <br><br> My practical experience has equipped me with a solid foundation in hardware, software, network configuration, and coding, which I am actively expanding to include a wider range of languages.
-          <br> I am confident that my proactive approach, combined with a commitment to innovation and efficiency, makes me a valuable and adaptable asset ready to contribute significantly to your team's success.
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg" aria-hidden="true"><div class="grid-lines"></div><div class="spot"></div></div>
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="status mono"><span class="pulse"></span>Open to opportunities · Cape Town</p>
+        <h1 class="hero-name" aria-label="Mduduzi Gwija">
+          <span class="line" data-letters>Mduduzi</span>
+          <span class="line outline" data-letters>Gwija</span>
+        </h1>
+        <p class="hero-role">
+          I build
+          <span class="rotator" aria-live="polite"><span data-rotate='["SharePoint systems","workflow apps","dashboards","database apps","websites"]'>SharePoint systems</span></span>
+          <br>that replace paperwork.
         </p>
-
-        <div class="social-icons">
-          <a href="https://github.com/MduduziGwija"><i class="bx bxl-github"></i></a>
-          <a href=" https://www.linkedin.com/in/mduduzigwija"><i class="bx bxl-linkedin-square"></i></a>
-          <a href="https://www.instagram.com/kumkani_mavuso/"><i class="bx bxl-instagram"></i></a>
+        <p class="hero-sub">Public-sector professional by day, builder by habit. I turn slow, manual processes into tools people actually use, and I'm looking for the next chance to grow professionally in IT.</p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn--accent magnetic" data-cursor="Explore">See my work <i class="bx bx-down-arrow-alt"></i></a>
+          <a href="#contact" class="btn btn--ghost magnetic" data-cursor="Hello">Work with me</a>
         </div>
-
-        <div class="btn-group">
-          <button class="btn hire-btn">Work with me</button>
-
+        <div class="socials">
+          <a href="https://github.com/MduduziGwija" target="_blank" rel="noopener" aria-label="GitHub" data-cursor="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/mduduzigwija" target="_blank" rel="noopener" aria-label="LinkedIn" data-cursor="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="mailto:mduduzigwija@gmail.com" aria-label="Email" data-cursor="Email"><i class="bx bx-envelope"></i></a>
         </div>
       </div>
 
-      <div class="home-img">
-        <img src="Image 1.JPEG" alt="Home Image" />
-      </div>
-    </section>
-
-    <!-- MODAL POPUP -->
-<div class="modal" id="work-modal">
-  <div class="modal-content">
-    <span class="close-btn">&times;</span>
-    <h2>Work with <span>Mduduzi</span></h2>
-    <p>
-      I'm open to opportunities in <span>IT, Automation, Data, and Web Development</span>.
-      <br><br>
-       <b>Location:</b> Cape Town, South Africa <br>
-      <b>Phone:</b> +27 71 834 0017 <br>
-      
-      <b>Email:</b> <a href="mailto: mduduzigwija@gmail.com">mduduzigwija@gmail.com</a><br>
-      <b>LinkedIn:</b> <a href=" https://www.linkedin.com/in/mduduzigwija">linkedin.com/in/mduduzigwija</a><br>
-      <b>GitHub:</b> <a href="https://github.com/MduduziGwija">github.com/MduduziGwija</a>
-    </p>
-    
-<a href="tel:+27718340017" class="gradient-btn">Call Me</a>
-
-  </div>
-</div>
-
-    <!-- ABOUT SECTION -->
-    <section class="about" id="about">
-      <div class="about-img">
-        <img src="Image 3.jpg" alt="About Image" />
-      </div>
-
-      <div class="about-content">
-        <h2>About <span>Me</span></h2>
-       <p>
-  Based in Cape Town, South Africa. I'm a Public Administration Honours graduate with a solid foundation in operational support, financial administration, and digital systems within the public sector. Over the past few years, I’ve built a reputation for being proactive, detail-oriented, and committed to ethical governance, especially during my time at the Western Cape Department of Infrastructure.
-</p>
-<br>
-
-<p class="read-more-content">
-  While my journey began in public administration, I’m now fully immersed in the world of tech. Driven by a strong passion for technology and a growing understanding of IT fundamentals, I’ve gained hands-on experience with tools like Power Automate, Power BI, Python, SQL, and SharePoint. I’m actively expanding my skill set to include a wider range of programming languages and digital tools.
-  <br><br>
-  My goal is to study further when financially able and earn an NQF level 7 in Information Systems. Until then, my short-term goal is to obtain industry-recognised certifications like CompTIA. I’m passionate about joining a tech-driven environment where I can learn, grow, and contribute meaningfully, surrounded by people who share the same curiosity and drive.
-  <br><br>
-  Whether it’s automating workflows, managing data, or supporting digital transformation, I bring a unique blend of public sector insight and tech enthusiasm to every challenge. My practical experience has also equipped me with a solid foundation in hardware, software, network configuration, and coding, which I continue to build on with every project and learning opportunity.
-  <br><br>
-  I’m currently working on personal projects that combine my interest in gaming and technology, such as Python scripts for game tweaks and performance analysis, and a concept for a centralised university application platform that simplifies the process for prospective students. These projects will be shared soon on my GitHub profile as I continue to grow and showcase my skills.
-</p>
-
-
-<button class="btn" id="read-more-btn">Read More</button>
-
-      </div>
-    </section>
-
-    <!-- SKILLS AND INTERESTS SECTION -->
-    <section class="skills" id="skills-and-interests">
-  <h2>Skills and <span>Interests</span></h2>
-
-  <div class="skills-container">
-
-    <div class="skills-box">
-  <div class="skills-info">
-    <i class="bx bx-cog"></i>
-    <h3>Power Automate</h3>
-    <p>
-      I created a Power Automate flow to log and track HOD enquiries, improving traceability and reducing manual errors.
-      <br>
-      <br>
-      This project highlighted my drive to streamline public service processes.
-    </p>
-  </div>
-</div>
-
-<div class="skills-box">
-  <div class="skills-info">
-    <i class="bx bx-bar-chart-alt-2"></i>
-    <h3>Power BI</h3>
-    <p>
-      I use Power BI to turn data into insights.
-      <br>
-      <br>
-      I’ve built reports to support decision-making, applying visual analytics to real-world data challenges.
-    </p>
-  </div>
-</div>
-
-<div class="skills-box">
-  <div class="skills-info">
-    <i class="bx bx-code-curly"></i>
-    <h3>Python</h3>
-    <p>
-      I'm learning Python to automate tasks and explore game optimization.
-      <br>
-      <br>
-      I’m experimenting with scripts that tweak settings and analyse performance data.
-    </p>
-  </div>
-</div>
-
-<div class="skills-box">
-  <div class="skills-info">
-    <i class="bx bx-data"></i>
-    <h3>SQL</h3>
-    <p>
-      I use SQL to query and manage data. 
-      <br>
-      <br>
-      I’ve applied it in reporting tasks and continue to build my skills through hands-on practice.
-    </p>
-  </div>
-</div>
-
-<div class="skills-box">
-  <div class="skills-info">
-    <i class="bx bx-share-alt"></i>
-    <h3>SharePoint</h3>
-    <p>
-      I’ve supported SharePoint restructuring and metadata capture, helping teams collaborate more effectively and improving data accessibility.
-    </p>
-  </div>
-</div>
-
-<div class="skills-box">
-  <div class="skills-info">
-    <i class="bx bx-code-alt"></i>
-    <h3>Web Development</h3>
-    <p>
-      I’m building responsive websites to showcase my skills. 
-      <br>
-      <br>
-      One idea I’m exploring is a platform to simplify university applications for students.
-    </p>
-  </div>
-</div>
-
-</div>
-
-
-  </div>
-</section>
-
-
-   <!-- CONTACT SECTION -->
-<section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-<form action="https://formspree.io/f/xldlypeg" method="POST">
-    <div class="input-group">
-        <div class="input-box">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
+      <figure class="hero-photo tilt" data-tilt>
+        <div class="photo-frame">
+          <img src="Image 1.JPEG" alt="Mduduzi Gwija standing in front of a wall of white light bars" width="1115" height="1115">
+          <div class="photo-shine" aria-hidden="true"></div>
         </div>
-        <div class="input-box">
-            <input type="tel" name="phone" placeholder="Phone Number">
-            <input type="text" name="subject" placeholder="Subject">
+        <div class="chip chip-1 float" aria-hidden="true"><i class="bx bxl-microsoft"></i> Power Platform</div>
+        <div class="chip chip-2 float" aria-hidden="true"><i class="bx bx-data"></i> Supabase · SQL</div>
+        <div class="chip chip-3 float" aria-hidden="true"><i class="bx bx-share-alt"></i> SharePoint</div>
+        <div class="code-card" aria-hidden="true">
+          <div class="code-bar"><i></i><i></i><i></i><span class="mono">me.js</span></div>
+          <pre><code data-typer></code><span class="caret"></span></pre>
         </div>
+      </figure>
     </div>
-    <div class="input-group-2">
-        <textarea name="message" placeholder="Your Message" cols="30" rows="10" required></textarea>
-        <input type="submit" value="Send Message" class="btn">
+    <a href="#about" class="scroll-hint mono" aria-label="Scroll to About"><span>Scroll</span><i></i></a>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="band" aria-hidden="true">
+    <div class="band-track">
+      <span>SharePoint <i>✦</i> Power Apps <i>✦</i> Power Automate <i>✦</i> Power BI <i>✦</i> Supabase <i>✦</i> PostgreSQL <i>✦</i> JavaScript <i>✦</i> Python <i>✦</i> HTML &amp; CSS <i>✦</i></span>
+      <span>SharePoint <i>✦</i> Power Apps <i>✦</i> Power Automate <i>✦</i> Power BI <i>✦</i> Supabase <i>✦</i> PostgreSQL <i>✦</i> JavaScript <i>✦</i> Python <i>✦</i> HTML &amp; CSS <i>✦</i></span>
     </div>
-</form>
+  </div>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="wrap about">
+      <div class="about-media reveal">
+        <figure class="about-photo tilt" data-tilt>
+          <img src="Image 3.jpg" alt="Mduduzi Gwija in a navy suit holding his graduation gown and sash" loading="lazy" width="2662" height="2662">
+          <figcaption class="badge mono"><i class="bx bxs-graduation"></i> Honours, Public Administration</figcaption>
+        </figure>
+      </div>
+
+      <div class="about-copy">
+        <p class="eyebrow mono reveal"><span>01</span> About me</p>
+        <h2 class="h2 reveal">From public administration to <em>building the systems</em> it runs on.</h2>
+        <p class="lead reveal">I'm Mduduzi, based in Cape Town. I hold an Honours degree in Public Administration and work in the public sector as an Institutional Coordination Officer, where I still design and develop SharePoint systems for my organisation.</p>
+        <p class="reveal">I started out in operational support and financial administration, and kept noticing the same thing: good people losing hours to spreadsheets, paper forms and email chains. So I started building. Power Automate flows, a Power Apps lease register, SharePoint restructuring, then full web apps backed by real databases.</p>
+        <p class="reveal">Today I have shipped production tools at work and independent apps on my own, and I run <a class="inline-link" href="https://mduduzigwija.github.io/novela-solutions/" target="_blank" rel="noopener">Novela Solutions Africa</a> on the side. I'm still expanding my experience and I want to keep learning alongside people who build for a living. If your team values curiosity and follow-through, let's talk.</p>
+
+        <div class="stats reveal">
+          <div class="stat"><b data-count="6">6</b><span class="mono">Projects shipped</span></div>
+          <div class="stat"><b data-count="26">26</b><span class="mono">Universities mapped</span></div>
+          <div class="stat"><b data-count="756">756</b><span class="mono">Programmes indexed</span></div>
+          <div class="stat"><b data-count="24" data-suffix="h">24h</b><span class="mono">Reply time</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JOURNEY ============ -->
+  <section class="section section--tint" id="journey">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow mono reveal"><span>02</span> Journey</p>
+          <h2 class="h2 reveal">Learning by shipping.</h2>
+        </div>
+        <p class="head-note reveal">Every step added something new to the toolkit, and the next one is already in motion.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="t-item reveal">
+          <span class="t-dot"></span>
+          <div class="t-card spot-card">
+            <p class="t-when mono">Now</p>
+            <h3>Institutional Coordination Officer</h3>
+            <p class="t-where mono">Public sector · Cape Town</p>
+            <p>Coordinating across the institution while continuing to design and develop SharePoint systems: site structures, lists, metadata and the workflows that sit on top of them.</p>
+            <ul class="tags"><li>SharePoint</li><li>Microsoft Lists</li><li>Coordination</li></ul>
+          </div>
+        </li>
+        <li class="t-item reveal">
+          <span class="t-dot"></span>
+          <div class="t-card spot-card">
+            <p class="t-when mono">2026</p>
+            <h3>Independent builder · Novela Solutions Africa</h3>
+            <p class="t-where mono">After hours</p>
+            <p>Built ImbizoConnect and a Leave Management / HR app with Supabase, PostgreSQL row-level security and automated tests, and launched Novela Solutions Africa for websites, systems and dashboards.</p>
+            <ul class="tags"><li>JavaScript</li><li>Supabase</li><li>PostgreSQL</li><li>Playwright</li></ul>
+          </div>
+        </li>
+        <li class="t-item reveal">
+          <span class="t-dot"></span>
+          <div class="t-card spot-card">
+            <p class="t-when mono">Earlier</p>
+            <h3>Operational support &amp; financial administration</h3>
+            <p class="t-where mono">Public sector · Same organisation</p>
+            <p>Built a Power Apps lease register for a property management team, a Power Automate flow that logs and tracks HOD enquiries, and supported SharePoint restructuring and metadata capture.</p>
+            <ul class="tags"><li>Power Apps</li><li>Power Automate</li><li>Power BI</li><li>SQL</li></ul>
+          </div>
+        </li>
+        <li class="t-item reveal">
+          <span class="t-dot"></span>
+          <div class="t-card spot-card">
+            <p class="t-when mono">Foundation</p>
+            <h3>Honours in Public Administration</h3>
+            <p class="t-where mono">Graduate</p>
+            <p>Governance, policy and how public institutions really work. It is why I build for the people who use a system, not just the ones who commission it.</p>
+            <ul class="tags"><li>Governance</li><li>Ethics</li><li>Policy</li></ul>
+          </div>
+        </li>
+        <li class="t-item t-item--next reveal">
+          <span class="t-dot"></span>
+          <div class="t-card spot-card">
+            <p class="t-when mono">Next</p>
+            <h3>Certifications &amp; Information Systems</h3>
+            <p class="t-where mono">In progress</p>
+            <p>Working towards industry certifications such as CompTIA, then an NQF level 7 qualification in Information Systems, while taking on a professional IT role where I can keep learning.</p>
+            <ul class="tags"><li>CompTIA</li><li>NQF 7</li><li>Always learning</li></ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow mono reveal"><span>03</span> Selected work</p>
+          <h2 class="h2 reveal">Things I've built.</h2>
+        </div>
+        <div class="filters reveal" role="group" aria-label="Filter projects">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter" data-filter="web" aria-pressed="false">Web apps</button>
+          <button type="button" class="filter" data-filter="workplace" aria-pressed="false">Workplace</button>
+        </div>
+      </div>
+      <div class="projects" data-projects></div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section--tint" id="skills">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <p class="eyebrow mono reveal"><span>04</span> Skills &amp; interests</p>
+          <h2 class="h2 reveal">My toolkit.</h2>
+        </div>
+        <p class="head-note reveal">Tools I've used on real projects, and where I'm heading next.</p>
+      </div>
+
+      <div class="skills">
+        <article class="skill spot-card reveal"><i class="bx bx-share-alt"></i><h3>SharePoint</h3><p>Site structures, lists, metadata and permissions. My day-to-day at work.</p><span class="level mono" style="--lvl:.85">Daily use</span></article>
+        <article class="skill spot-card reveal"><i class="bx bx-git-branch"></i><h3>Power Automate</h3><p>Flows that log, route and track requests, like the HOD enquiry tracker.</p><span class="level mono" style="--lvl:.8">Built in production</span></article>
+        <article class="skill spot-card reveal"><i class="bx bx-mobile-alt"></i><h3>Power Apps</h3><p>Canvas apps on Microsoft Lists, like the lease register for a property team.</p><span class="level mono" style="--lvl:.75">Built in production</span></article>
+        <article class="skill spot-card reveal"><i class="bx bx-bar-chart-alt-2"></i><h3>Power BI</h3><p>Reports that turn raw data into something a manager can act on.</p><span class="level mono" style="--lvl:.65">Reporting</span></article>
+        <article class="skill spot-card reveal"><i class="bx bx-data"></i><h3>SQL &amp; Supabase</h3><p>PostgreSQL schemas, row-level security and workflow functions, covered by tests.</p><span class="level mono" style="--lvl:.75">Shipped apps</span></article>
+        <article class="skill spot-card reveal"><i class="bx bxl-javascript"></i><h3>JavaScript, HTML &amp; CSS</h3><p>Framework-free web apps and responsive sites, from this portfolio to ImbizoConnect.</p><span class="level mono" style="--lvl:.75">Shipped apps</span></article>
+        <article class="skill spot-card reveal"><i class="bx bxl-python"></i><h3>Python</h3><p>Automating tasks and experimenting with scripts for game tweaks and performance analysis.</p><span class="level mono" style="--lvl:.45">Learning</span></article>
+        <article class="skill spot-card reveal"><i class="bx bxl-github"></i><h3>Git, GitHub &amp; testing</h3><p>Version control, GitHub Pages hosting, Actions and Playwright browser tests.</p><span class="level mono" style="--lvl:.6">Growing</span></article>
+      </div>
+
+      <div class="interests reveal">
+        <p class="mono">Interests</p>
+        <ul>
+          <li><i class="bx bx-joystick"></i>Gaming &amp; performance tuning</li>
+          <li><i class="bx bx-book-open"></i>Access to education</li>
+          <li><i class="bx bx-buildings"></i>Civic &amp; public-sector tech</li>
+          <li><i class="bx bx-network-chart"></i>Hardware &amp; networking</li>
+          <li><i class="bx bx-bot"></i>Automation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div class="contact-info">
+          <p class="eyebrow mono reveal"><span>05</span> Contact</p>
+          <h2 class="display reveal">Let's build something <em>useful.</em></h2>
+          <p class="reveal">Hiring, collaborating or just want to compare notes on SharePoint? Send a message and I'll reply within 24 hours.</p>
+          <ul class="contact-list reveal">
+            <li><button type="button" class="contact-row" data-copy="mduduzigwija@gmail.com" data-cursor="Copy"><i class="bx bx-envelope"></i><span><small class="mono">Email · click to copy</small>mduduzigwija@gmail.com</span><i class="bx bx-copy end"></i></button></li>
+            <li><a class="contact-row" href="tel:+27718340017" data-cursor="Call"><i class="bx bx-phone"></i><span><small class="mono">Phone</small>071 834 0017</span><i class="bx bx-right-arrow-alt end"></i></a></li>
+            <li><a class="contact-row" href="https://www.linkedin.com/in/mduduzigwija" target="_blank" rel="noopener" data-cursor="Connect"><i class="bx bxl-linkedin"></i><span><small class="mono">LinkedIn</small>in/mduduzigwija</span><i class="bx bx-link-external end"></i></a></li>
+            <li><a class="contact-row" href="https://github.com/MduduziGwija" target="_blank" rel="noopener" data-cursor="Follow"><i class="bx bxl-github"></i><span><small class="mono">GitHub</small>MduduziGwija</span><i class="bx bx-link-external end"></i></a></li>
+          </ul>
+        </div>
+
+        <form class="form spot-card reveal" id="contact-form" action="https://formspree.io/f/xldlypeg" method="POST">
+          <div class="field-row">
+            <label class="field"><input type="text" name="name" placeholder=" " required autocomplete="name"><span>Full name</span></label>
+            <label class="field"><input type="email" name="email" placeholder=" " required autocomplete="email"><span>Email</span></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><input type="tel" name="phone" placeholder=" " autocomplete="tel"><span>Phone (optional)</span></label>
+            <label class="field"><input type="text" name="subject" placeholder=" "><span>Subject</span></label>
+          </div>
+          <label class="field"><textarea name="message" rows="6" placeholder=" " required></textarea><span>Your message</span></label>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+          <button type="submit" class="btn btn--accent btn--block magnetic" data-cursor="Send">Send message <i class="bx bx-send"></i></button>
+          <p class="form-status mono" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer class="footer">
- 
-  <div class="social-icons">
-    <a href="https://github.com/MduduziGwija"><i class="bx bxl-github"></i></a>
-    <a href=" https://www.linkedin.com/in/mduduzigwija"><i class="bx bxl-linkedin-square"></i></a>
-    <a href="https://www.instagram.com/kumkani_mavuso/"><i class="bx bxl-instagram"></i></a>
-  </div>
-
-  <ul class="footer-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-   
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-
-  <div class="copyright">
-    <p>&copy; 2026 Mduduzi Gwija | All rights reserved.</p>
+  <div class="wrap">
+    <p class="footer-big" aria-hidden="true" data-letters>Mduduzi Gwija</p>
+    <div class="footer-bottom mono">
+      <span>&copy; <span data-year>2026</span> Mduduzi Gwija. All rights reserved.</span>
+      <nav aria-label="Footer"><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+      <a href="#home" class="to-top" data-cursor="Top">Back to top ↑</a>
+    </div>
   </div>
 </footer>
 
-    <script src="script.js"></script>
-
-<!-- GoatCounter Analytics -->
-  <script data-goatcounter="https://mduduzi-profile-website.goatcounter.com/count"
-          async src="//gc.z for download, or help you set this up
-
-    
-  </body>
+<script src="script.js" defer></script>
+<!-- GoatCounter analytics -->
+<script data-goatcounter="https://mduduzi-profile-website.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
 </html>
-
-
-
-
