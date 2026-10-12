@@ -398,6 +398,19 @@ const ART = {
     return `<rect width="800" height="450" fill="#0d181b"/>${tiles}
       <g class="hv-spin"><circle cx="700" cy="390" r="22" fill="none" stroke="#b79cff" stroke-width="5" stroke-dasharray="10 7"/></g>`;
   },
+  eish: () => `<rect width="800" height="450" fill="#10201b"/>
+      <text x="60" y="190" font-family="Bricolage Grotesque, Impact, sans-serif" font-weight="800" font-size="110" fill="#f2f5f3" letter-spacing="-3">Eish</text>
+      <text x="330" y="190" font-family="Bricolage Grotesque, Impact, sans-serif" font-weight="800" font-size="110" fill="#94e1b4" letter-spacing="-3">PDF</text>
+      ${svgText(64, 236, 'FOR WHEN YOUR PDF SAYS EISH', '#8aa59b', 14)}
+      <g class="hv-slide"><rect x="64" y="280" width="470" height="56" rx="28" fill="#0b1513" stroke="#2d5a49"/>${svgText(94, 313, 'UNLOCK · MERGE · SPLIT · EDIT · OCR', '#94e1b4', 14)}</g>
+      <g class="hv-pop"><rect x="580" y="90" width="130" height="180" rx="10" fill="#f2f5f3"/><rect x="596" y="116" width="80" height="8" rx="4" fill="#9db3aa"/><rect x="596" y="138" width="98" height="8" rx="4" fill="#c4d3cc"/><rect x="596" y="160" width="70" height="8" rx="4" fill="#c4d3cc"/><circle cx="690" cy="262" r="26" fill="#94e1b4"/><path d="M679 262l8 8 14-16" stroke="#062018" stroke-width="4" fill="none"/></g>`,
+  pool: () => `<rect width="800" height="450" fill="#0c2530"/>
+      <path class="hv-draw" d="M0 300 Q100 260 200 300 T400 300 T600 300 T800 300" fill="none" stroke="#6fd3e8" stroke-width="3" stroke-dasharray="600"/>
+      <path d="M0 340 Q100 300 200 340 T400 340 T600 340 T800 340 V450 H0Z" fill="#14485a"/>
+      <path d="M0 385 Q100 345 200 385 T400 385 T600 385 T800 385 V450 H0Z" fill="#1d6a82"/>
+      <g class="hv-pop"><circle cx="620" cy="120" r="42" fill="#ffd166"/></g>
+      ${svgText(60, 140, 'MOTHER CITY POOLS', '#e8f6fa', 30)}
+      <g class="hv-slide"><rect x="60" y="170" width="220" height="48" rx="24" fill="#6fd3e8"/>${svgText(96, 200, 'GET A QUOTE →', '#0c2530', 15)}</g>`,
   novela: () => `<rect width="800" height="450" fill="#000"/>
       <text x="400" y="250" text-anchor="middle" font-family="Bricolage Grotesque, Impact, sans-serif" font-weight="800" font-size="150" fill="#fff" letter-spacing="-4">NOVELA</text>
       <g class="hv-slide"><rect x="270" y="300" width="260" height="46" rx="23" fill="#fc74dd"/>${svgText(318, 329, "LET'S TALK →", '#1d1a1a', 16)}</g>
@@ -410,13 +423,29 @@ const PROJECTS = [
     title: 'ImbizoConnect', cat: 'web', art: 'imbizo', where: 'Concept · independent build', year: '2026', wide: true,
     desc: 'A concept platform I designed and built: students create one profile and apply to several South African universities from one place, with an APS calculator, fee summary and a mock admissions portal. Fully working demo with made-up students.',
     tags: ['JavaScript', 'Supabase', 'PostgreSQL RLS', 'Tests'],
+    preview: { img: 'imbizo' },
     links: [['Live demo', 'https://mduduzigwija.github.io/ImbizoConnect/demo/']]
   },
   {
     title: 'Leave Management / HR App', cat: 'web', art: 'leave', where: 'Independent build', year: '2026',
     desc: 'Leave and HR records for South African workplaces: the public service Z1(a) process or paperless BCEA leave. Fills in the real Word forms, applies SA leave rules and public holidays, and enforces permissions in the database.',
     tags: ['JavaScript', 'Supabase', 'docxtemplater', 'Playwright'],
+    preview: { img: 'leave', dur: 9 },
     links: [['Live demo', 'https://mduduzigwija.github.io/Leave-Management-App/demo/']]
+  },
+  {
+    title: 'Eish PDF', cat: 'web', art: 'eish', where: 'Independent build · open source', year: '2026',
+    desc: 'Free PDF tools that run entirely in the browser, so files never leave the device. Unlock, merge, split, edit text (even on scanned pages), convert to and from Word, Excel and PowerPoint, compare and OCR, with a built-in test suite.',
+    tags: ['TypeScript', 'WebAssembly', 'MuPDF', 'Tesseract OCR'],
+    preview: { img: 'eish', dur: 12 },
+    links: [['Try it', 'https://mduduzigwija.github.io/eish-pdf/'], ['Source code', 'https://github.com/MduduziGwija/eish-pdf']]
+  },
+  {
+    title: 'Mother City Pools', cat: 'web', art: 'pool', where: 'Client website', year: '2026', wide: true,
+    desc: 'A fast, secure website for a Cape Town swimming pool company, replacing their old WordPress site. Service pages, a quote form that emails each request to the owner, and a simple admin so the owner can update the content.',
+    tags: ['HTML', 'CSS', 'JavaScript', 'PHP'],
+    preview: { img: 'pool' },
+    links: [['Visit site', 'https://www.mothercitypools.co.za/']]
   },
   {
     title: 'Lease Register', cat: 'workplace', art: 'lease', where: 'Built at work', year: 'Public sector',
@@ -437,9 +466,10 @@ const PROJECTS = [
     note: 'Internal, ongoing'
   },
   {
-    title: 'Novela Solutions Africa', cat: 'web', art: 'novela', where: 'My studio', year: '2026', wide: true,
+    title: 'Novela Solutions Africa', cat: 'web', art: 'novela', where: 'My studio', year: '2026',
     desc: 'The website for my independent studio: a stretching wordmark, animated showreel, filterable case studies and a 4-step project brief form. Hand-coded, no framework.',
     tags: ['HTML', 'CSS', 'JavaScript', 'Formspree'],
+    preview: { img: 'novela', dur: 18 },
     links: [['Visit site', 'https://mduduzigwija.github.io/novela-solutions/']]
   }
 ];
@@ -450,8 +480,13 @@ const liveObserver = !finePointer && 'IntersectionObserver' in window
 
 (function projects() {
   const grid = document.querySelector('[data-projects]');
+  const preview = ({ img, dur = 16 }, url) => `<div class="p-preview" style="--pv-dur:${dur}s">
+      <div class="pv-bar"><i></i><i></i><i></i><span>${url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}</span></div>
+      <div class="pv-view"><img src="previews/${img}.webp" alt="" loading="lazy" decoding="async"></div>
+      <b class="pv-tag">Preview</b>
+    </div>`;
   const card = p => `<article class="project spot-card reveal${p.wide ? ' wide' : ''}">
-      <div class="p-art" aria-hidden="true"><svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">${ART[p.art]()}</svg></div>
+      <div class="p-art" aria-hidden="true"><svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice">${ART[p.art]()}</svg>${p.preview ? preview(p.preview, p.links[0][1]) : ''}</div>
       <div class="p-body">
         <p class="p-meta mono"><b>${p.where}</b><span>${p.year}</span></p>
         <h3>${p.title}</h3>
